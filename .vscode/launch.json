@@ -1,0 +1,30 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
+  // I wrote this with A LOT of help from https://claude.ai, please let me know if that's a no-no
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run scenario by tag name",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v18.20.2/bin/node",
+      "program": "${workspaceFolder}/node_modules/.bin/wdio",
+      "args": [
+        "--cucumberOpts.tagExpression=\"${input:scenarioTag}\""
+      ]
+    }
+  ],
+  "inputs": [
+        {
+            "id": "scenarioTag",
+            "type": "promptString",
+            "description": "Tag name, e.g. @BASIC_AUTH for basic_auth.feature"
+        }
+    ]
+}
