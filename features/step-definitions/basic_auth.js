@@ -4,7 +4,7 @@ import { expect } from "@wdio/globals";
 import BasicAuthPage from "../pageobjects/basic_auth.page.js";
 
 When(
-  /^I use basic auth to login with (\w+) and (.+)$/,
+  /^I use basic auth to login with (.+) and (.+)$/,
   async (username, password) => {
     await BasicAuthPage.login(username, password);
   }
