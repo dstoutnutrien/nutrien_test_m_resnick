@@ -2,7 +2,7 @@ class DropdownPage {
   get elements() {
     return {
       header: () => $("h3"),
-      input: () => $("/html/body/div[2]/div/div/div/div/input"),
+      input: () => $('.example input[type="number"]'),
     };
   }
 
