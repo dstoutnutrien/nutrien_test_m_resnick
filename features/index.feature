@@ -1,3 +1,4 @@
+@INDEX
 Feature: The Internet Guinea Pig Website
 
   # This scenario takes 33 seconds as written, once passing.
@@ -5,7 +6,6 @@ Feature: The Internet Guinea Pig Website
   # all the links asynchronously and wait until they've all loaded
   # in separate tabs before asserting on the correct URL paths...
   # But that might be more trouble than it's worth
-  @INDEX
   Scenario Outline: As a user,  I can navigate to all pages
     Given I am at the index page
     When I click the <page> link
