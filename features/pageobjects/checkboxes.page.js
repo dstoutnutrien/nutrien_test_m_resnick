@@ -1,4 +1,9 @@
 class CheckboxesPage {
+  // I tried refactoring this to use individual getters like
+  // The wdio page object example:
+  // https://webdriver.io/docs/pageobjects/#get--ing-your-selectors
+  // But it ended up being more hassle than it was worth.
+  // It's unfortunate that JavaScript getters don't allow arguments.
   get elements() {
     return {
       header: () => $("h3"),
