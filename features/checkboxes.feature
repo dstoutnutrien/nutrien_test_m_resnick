@@ -1,11 +1,17 @@
+@CHECKBOXES
 Feature: The Internet Guinea Pig Website
 
-  @CHECKBOXES
-  Scenario Outline: As a user, I can log into the secure area
+  Scenario: As a user, I can check a checkbox
     Given I am on the Checkboxes page
-    When I select checkbox <num>
+    And I see that checkbox 1 is unchecked
+    When I click the checkbox
     Then The checkbox should be checked
-      Examples:
-      | num |
-      |   1 |
-      |   2 |
+
+  Scenario: As a user, I can uncheck a checkbox
+    Given I am on the Checkboxes page
+    And I see that checkbox 2 is checked
+    When I click the checkbox
+    Then The checkbox should be unchecked
+
+
+

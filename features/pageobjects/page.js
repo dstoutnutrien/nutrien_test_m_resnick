@@ -10,8 +10,7 @@ export default class Page {
       "Basic Auth": "basic_auth",
       Checkboxes: "checkboxes",
       Dropdown: "dropdown",
-      inputs: "inputs",
-
+      Inputs: "inputs",
       "A/B Testing": "abtest",
       "Add/Remove Elements": "add_remove_elements/",
       "Broken Images": "broken_images",
@@ -68,8 +67,8 @@ export default class Page {
    * Opens a sub page of the page
    * @param path path of the sub page (e.g. /path/to/page.html)
    */
-  open(path = "") {
+  async open(path = "") {
     if (path in this.paths) return this.open(this.paths[path]);
-    return browser.url(`${this.base}/${path}`);
+    await browser.url(`${this.base}/${path}`);
   }
 }

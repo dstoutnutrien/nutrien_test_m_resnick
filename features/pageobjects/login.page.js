@@ -1,3 +1,8 @@
+// This is the only source file that imports { $ }.
+// Does inheriting from a page object that we implemented ourselves
+// Break something about wdio's default behavior for classes with
+// Page in the name?
+
 import { $ } from "@wdio/globals";
 import Page from "./page.js";
 
@@ -33,8 +38,8 @@ class LoginPage extends Page {
   /**
    * overwrite specific options to adapt it to page object
    */
-  open() {
-    return super.open("login");
+  async open() {
+    await super.open("login");
   }
 }
 
