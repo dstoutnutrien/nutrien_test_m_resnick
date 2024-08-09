@@ -5,7 +5,7 @@ We're trying to test https://the-internet.herokuapp.com/ but, it's going horribl
 1. Fork this repo.
 2. Fix as much as you can.
 3. Make any changes you feel would make this better.
-4. Make a PR.
+4. Make a PR from your fork to the original you received a link for.
 
 ## Node JS
 
