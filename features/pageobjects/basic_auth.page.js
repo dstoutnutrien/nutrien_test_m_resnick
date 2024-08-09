@@ -2,9 +2,6 @@
 // import Page from "./page.js";
 
 class BasicAuthPage {
-  get message() {
-    return $(".example > p");
-  }
   get body() {
     return $("body");
   }
