@@ -1,3 +1,5 @@
+// Some of the page objects import $ from globals, some don't.
+// I'm not sure what the significance of this is.
 // import { $ } from "@wdio/globals";
 // import Page from "./page.js";
 
