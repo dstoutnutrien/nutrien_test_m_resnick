@@ -1,5 +1,8 @@
 import { Given, When, Then, world } from "@cucumber/cucumber";
 import Page from "../pageobjects/page.js";
+// In order to be able to extend the Page class in login.page.js,
+// you had to export Page as a class, not an instantiated object.
+// That's why index is initialized as a new page here.
 const index = new Page();
 
 Given(/^I am on the (.+) page$/, async (page) => {
